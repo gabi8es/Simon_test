@@ -106,6 +106,7 @@ void playGame()
 	  	  level++;
 	  }
 	}
+  free(combination);
 }
 
 void showCombination(int *combination, int longitude)
