@@ -1,4 +1,9 @@
-// Simon_test.ino
+/*
+  Simon_test.ino - Test code to the Simon says project.
+  Created by Gabriel Pallares, January, 2014.
+  Released into the public domain.
+*/
+// 
 
 //***********************************************************************
 //					DEFINES
