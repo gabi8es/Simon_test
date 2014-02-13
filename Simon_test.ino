@@ -34,10 +34,10 @@
 //LEDS INPUTS
 #define numLeds 4
 
-#define redLed 7
+#define redLed 4
 #define greenLed 6
-#define yellowLed 5
-#define blueLed 4
+#define yellowLed 7
+#define blueLed 5
 
 
 //BUTON INPUTS

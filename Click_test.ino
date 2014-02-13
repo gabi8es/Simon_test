@@ -17,6 +17,7 @@
 #define buttonPin 5
 
 int val, state, lastButtonPress;
+int pressed = 0;
 
 void setup() {
 
@@ -40,11 +41,11 @@ void setup() {
 void loop() {
 
 	val = digitalRead(buttonPin);
-	if (val != HIGH)
+	if ((val != HIGH) && (!pressed))
 	{
 		if (millis()-lastButtonPress > 100)
 		{
-
+                        pressed = 1;
 			Serial.write("Click\n");
 			if (state == LOW)
 			{
@@ -63,7 +64,14 @@ void loop() {
 			Serial.write("Click descartado\n");
 		}
 	}
+        else
+        {
+          if(val == HIGH)
+          {
+            pressed = 0;
+          }
+        }
 	digitalWrite(ledPin, state);
-	delay(400);
+	delay(100);
 }
 
